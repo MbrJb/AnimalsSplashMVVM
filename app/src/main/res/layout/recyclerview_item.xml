@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/grey"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/AnimalImageView"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:padding="10dp"
+            app:layout_constraintRight_toLeftOf="@id/AnimalNameTextView"
+            app:layout_constraintTop_toTopOf="parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/dog">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/AnimalNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/AnimalImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text ="Animal"
+            android:padding="1dp"
+            android:layout_marginTop="10dp"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:textColor="@color/teal_200">
+        </TextView>
+
+        <TextView
+            android:id="@+id/AnimalDescriptionTextView"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/AnimalNameTextView"
+            app:layout_constraintLeft_toRightOf="@id/AnimalImageView"
+            tools:text="Details go here"
+            android:textColor="@color/teal_700"
+            android:textSize="20sp"
+            android:layout_marginTop="2dp"
+            >
+        </TextView>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/complementaryToTheGrey"
+            app:layout_constraintTop_toBottomOf="@id/AnimalImageView"
+            app:layout_constraintRight_toRightOf="parent">
+        </View>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
